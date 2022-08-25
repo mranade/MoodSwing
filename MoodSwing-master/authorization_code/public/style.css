@@ -1,0 +1,70 @@
+/* Boone Wiegand */
+/* Text Formatting */
+.format {
+    /* OPTIONAL CODE FOR GRADIENT TEXT
+    background: linear-gradient(to right, #1DB954, rgb(109, 109, 109));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    */
+    color: #00C4CC;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Traits of Unclicked button */
+.unclicked{
+    background-color: rgb(23, 138, 117);
+    border: 1px solid black;
+    color: white;
+    width: 8em; /* Button Size */
+    height: 6em;
+    display: inline-block;
+    margin-right: 25px;
+
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Monsterrat';
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+/* Traits when hovering over Unclicked button */
+.unclicked:hover {
+    background-color: rgb(33, 217, 183);
+    color: white;
+}
+
+/* Traits of Clicked button */
+.clicked{
+    background-color: rgb(33, 217, 183);
+    border: 1px solid black;
+    border-radius: 8px;  /* Rounds Edges */
+    color: white;
+    width: 9em; /* Button Size */
+    height: 7em;
+    display: inline-block;
+    margin-right: 25px;
+
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Monsterrat';
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+
+}
+
+/* Code specific to long_button */
+.long_button {
+    background-color: rgb(23, 138, 117);
+    border: 1px solid black;
+    width: 20em; /* Button Size */
+    height: 4em;
+    display: inline-block;
+    margin-right: 25px;
+
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: 'Monsterrat';
+}

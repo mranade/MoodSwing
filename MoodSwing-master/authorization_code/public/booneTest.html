@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        html { font-family: 'Monsterrat'; color: #333;}
+        body { background-image: linear-gradient(to right, #1DB954 , #E43397); margin: 0;}
+        #container {width: 1500px; margin: 0 auto; background: #fff;}
+            #header { width: 100%; height:150px; background-image: linear-gradient(to right, rgb(29, 179, 82) , rgb(220, 50, 146));}
+                #img { max-width: 100%; max-height: 100%;}
+            #banner { background: #333; height: 40px; clear: both;}
+            #left_col { float: left; width: 47%; height: 750px; border:1px solid #333; color: white; background: #333; margin-top: 5px; padding:20px; text-align: center;}
+                #left_sub_one { display: inline-block; width: 90%; height: 320px; color: white; padding: 20px; margin-bottom: 10px; text-align: center;}
+                #left_sub_two { display: inline-block; width: 90%; height: 320px; color: white; padding: 20px; margin-top: 10px; text-align: center;}
+                        #row_one { display: inline-block; width: 90%; height: 50px; border:none; padding: 27px; text-align: center;}
+                        #row_two { display: inline-block; width: 90%; height: 50px; border:none; padding: 27px; text-align: center;}
+                        #row_three { display: inline-block; width: 90%; height: 50px; border:none; padding: 27px; text-align: center;}
+            #right_col { float: right; width: 47%; height: 750px; border:1px solid #333; color: #fff; background: #333; margin-top: 5px; padding:20px}
+    </style>
+</head> <!--END HEAD-->
+
+<body>
+     <!--Connect JS Body Functions-->
+     <script type="text/javascript" src="script.js"></script>
+     <script type="text/javascript" src="bundle.js"></script>
+     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <!--CONTAINER-->
+    <div id="container">
+        <!--HEADER-->
+        <div id="header">
+            <img id="img" src="logoTransparent.png" alt="">
+        </div>
+
+        <script>
+          function resetButtonClasses() {
+            var unclicked = "unclicked";
+            var clicked = "clicked";
+
+            var ids = ["energetic", "excited", "angry", "sad", "joyful", "calm"];
+            for (var i = 0; i < ids.length; i++) {
+              if (document.getElementById(ids[i]).classList.contains(clicked)) {
+                    document.getElementById(ids[i]).classList.add(unclicked);
+                    document.getElementById(ids[i]).classList.remove(clicked);
+              }
+            }
+          }
+        </script>
+
+        <!--CONTENT AREA-->
+        <div id="content_area">
+
+            <div id="banner"></div>
+
+            <div id="left_col">
+                <div id="left_sub_one">
+                    <h1 class="format"><strong>TELL US HOW YOU FEEL... </strong></h1>
+                    <p class="format">1. SELECT ANY EMOTIONS THAT YOU WANT</p>
+                    <p class="format">2. CLICK "GENERATE PLAYLIST"</p class="format">
+                    <p class="format">3. BASED ON YOUR CHOICES WE'LL CREATE A PLAYLIST AND ADD IT TO YOUR SPOTIFY ACCOUNT</p  >
+                    <p class="format">ENJOY!</p>
+                </div>
+                <div id="left_sub_two">
+                    <div id="row_one">
+                        <button id="energetic" onclick="changeButton(id);setBoolean(id);getBoolean(id);" class="unclicked">ENERGETIC</button>
+                        <button id="excited" onclick="changeButton(id);setBoolean(id);getBoolean(id);" class="unclicked"> EXCITED </button>
+                        <button id="angry" onclick="changeButton(id);setBoolean(id);getBoolean(id);" class="unclicked">ANGRY</button>
+                    </div>
+                    <div id="row_two">
+                        <button id="joyful" onclick="changeButton(id);setBoolean(id);getBoolean(id);" class="unclicked">JOYFUL</button>
+                        <button id="sad" onclick="changeButton(id);setBoolean(id);getBoolean(id);" class="unclicked">SAD</button>
+                        <button id="calm" onclick="changeButton(id);setBoolean(id);getBoolean(id);" class="unclicked">CALM</button>
+                    </div>
+                    <div id="row_three">
+                        <button id="long_boy" class="long_button" onclick="averageEmoteValues();resetValues();resetButtonClasses();logData();">CREATE A PLAYLIST</button>
+                    </div>
+
+                </div>
+            </div>
+
+           <div id="right_col">
+                <iframe id="iframe" src="https://open.spotify.com/embed/playlist/031YNiwTlAIBnJuhUhvAnS" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </input>
+            </div>
+        </div>
+
+        <!--FOOTER-->
+        <div id="footer"></div>
+    </div> <!--END CONTAINER-->
+
+</body> <!--END BODY-->
+
+</html>
